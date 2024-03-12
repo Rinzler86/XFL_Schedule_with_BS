@@ -14,7 +14,7 @@ day = datetime.datetime.now().day
 combined_time = f"{formatted_m} {day}"
 
 #Constants
-URL = requests.get("https://www.xfl.com/schedule/")
+URL = requests.get("https://www.xfl.com/schedule/", timeout=60)
 TEAMS = ['<sup>Vegas Vipers</sup>', '<sup>Arlington Renegades</sup>', '<sup>Orlando Guardians</sup>', '<sup>Houston Roughnecks</sup>', '<sup>St. Louis Battlehawks</sup>', '<sup>San Antonio Brahmas</sup>',
          '<sup>Seattle Sea Dragons</sup>', '<sup>D.C. Defenders</sup>']
 MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
